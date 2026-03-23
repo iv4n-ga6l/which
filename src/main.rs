@@ -24,7 +24,7 @@ fn main() {
     // Iterate over each command provided as an argument
     for command in args {
         match find_command_in_path(&command, &paths) {
-            Some(found_path) => println!("{}: {}", command, found_path),
+            Some(found_path) => println!("{}", found_path), // Output only the path
             None => eprintln!("{}: command not found", command),
         }
     }
